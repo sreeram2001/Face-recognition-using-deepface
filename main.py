@@ -6,13 +6,12 @@ Created on Wed Jun 30 19:28:37 2021
 """
 
 """ Face Recognition System Using Deepface """
-
 import matplotlib.pyplot as plt
 import cv2 as cv
 from deepface import DeepFace as df
 
-img1 = '1605192669650.jpg'
-img2 = 'download.png'
+img1 = '1555f4d5-3831-4315-8044-4f2a1e8d83b0.jpg'
+img2 = '2e64ad4d-8109-4936-b77a-7016cd520ede.jpg'
 
 image_1 = cv.imread(img1)
 plt.subplot(2,1,1)
@@ -33,9 +32,8 @@ print("Face Matching :",result['verified'])
 
 
 #To display the Characterisitcs of the Face
-obj = df.analyze(img_path='1605192669650.jpg',actions=['age','gender','race','emotion'])
+obj = df.analyze(img_path='2e64ad4d-8109-4936-b77a-7016cd520ede.jpg',actions=['age','gender','race','emotion'])
 print("Age: ",obj['age'])
 print("Gender: ",obj['gender'])
 print("Race: ",obj['race'])
 print("Emotion: ",obj['emotion'])
-
