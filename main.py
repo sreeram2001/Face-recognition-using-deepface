@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 import cv2 as cv
 from deepface import DeepFace as df
 
-img1 = 'E:/Startup Coding/face recognition system using deepface/photo.jpg'
-img2 = 'E:/Startup Coding/face recognition system using deepface/download.png'
+img1 = '1605192669650.jpg'
+img2 = 'download.png'
 
 image_1 = cv.imread(img1)
 plt.subplot(2,1,1)
@@ -33,7 +33,7 @@ print("Face Matching :",result['verified'])
 
 
 #To display the Characterisitcs of the Face
-obj = df.analyze(img_path='E:/Startup Coding/face recognition system using deepface/photo.jpg',actions=['age','gender','race','emotion'])
+obj = df.analyze(img_path='1605192669650.jpg',actions=['age','gender','race','emotion'])
 print("Age: ",obj['age'])
 print("Gender: ",obj['gender'])
 print("Race: ",obj['race'])
